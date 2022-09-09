@@ -1,0 +1,195 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  background-color: var(--red-color) !important;
+  color: var(--yellow-color) !important;
+}
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .search svg {
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+.landing {
+  height: calc(100vh - 60px);
+  background-color: var(--dark-color);
+}
+.head-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* start features */
+.features .feat {
+  padding-top: 150px;
+}
+.features .num {
+  font-size: 12rem;
+  bottom: 0;
+  color: var(--section-color);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon {
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+  margin: 20px 0;
+  font-weight: bold;
+}
+/* end features */
+/* start portfolio */
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio li {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+.portfolio li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.portfolio li:not(.active):hover {
+  color: var(--red-color);
+}
+.portfolio .box {
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+.portfolio .box::before {
+  content: attr(data-work);
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+  background-color: #33d1ccba;
+  left: -100%;
+  transition: 0.4s;
+}
+.portfolio .box:hover::before {
+  left: 5px;
+}
+/* end portfoilio */
+/* start stuff */
+.stuff .describe {
+  max-width: 600px;
+  margin: auto;
+}
+/* end stuff */
+/* start meet */
+.meet {
+  background-color: var(--section-color);
+}
+.meet h2 {
+  color: var(--yellow-color);
+}
+.meet .row h4 {
+  background-color: var(--green-color);
+  padding: 0.75rem;
+  font-weight: bold;
+  margin: 0;
+}
+.meet .row p {
+  padding: 1rem;
+}
+/* end meet */
+/* start project */
+.project {
+  background-color: var(--dark-color);
+}
+/* end project */
+/* start subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--section-color);
+  background-color: transparent;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input[type="text"]::placeholder {
+  color: white;
+}
+/* end subscribe */
+/* start footer */
+footer {
+  background-color: var(--dark-color);
+}
+.copyright span:first-of-type {
+  color: var(--green-color);
+}
+.copyright span:last-of-type {
+  color: var(--yellow-color);
+}
+footer .icons svg {
+  font-size: 24px;
+}
+footer .icons .facebook {
+  color: white;
+  background-color: #1877f2;
+}
+footer .icons .twitter {
+  color: white;
+  background-color: #1da1f2;
+}
+footer .icons .linkedin {
+  color: white;
+  background-color: #0077b5;
+}
+footer .icons .youtube {
+  color: white;
+  background-color: #ff0000;
+}
+/* end footer */
